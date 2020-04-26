@@ -4,9 +4,9 @@ Created on Tue Apr 14 15:47:17 2020
 
 @author: CupakabraNo1
 """
+import keras
 import gzip
 import numpy as np
-import matplotlib.pyplot as plt
 import struct
 import constants as const
 
@@ -39,6 +39,14 @@ buf = f.read(const.TEST_DATA)
 buff = np.frombuffer(buf, dtype=np.uint8).astype(np.int)
 test_label_data = buff.reshape(const.TEST_DATA, 1)
 
+
+train_image_data = train_image_data.astype('float32')
+test_image_data = test_image_data.astype('float32')
+train_image_data /= 255
+test_image_data /= 255
+
+train_label_data = keras.utils.to_categorical(train_label_data, const.CLASS_NUMBER)
+test_label_data = keras.utils.to_categorical(test_label_data, const.CLASS_NUMBER)
 
 #0 #A #K #U #e #o #y
 #1 #B #L #V #f #p #z

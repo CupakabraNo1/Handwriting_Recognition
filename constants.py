@@ -15,7 +15,6 @@ LABEL_ENCODING = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F
 def decode(position):
     return LABEL_ENCODING[position]
 
-EPOCHS = 6
+EPOCHS = 20
 BATCH_SIZE = 128
 CLASS_NUMBER = 62
-TEST_PROCENT = 0.2
