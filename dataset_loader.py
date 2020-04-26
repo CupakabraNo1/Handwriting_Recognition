@@ -48,6 +48,15 @@ test_image_data /= 255
 train_label_data = keras.utils.to_categorical(train_label_data, const.CLASS_NUMBER)
 test_label_data = keras.utils.to_categorical(test_label_data, const.CLASS_NUMBER)
 
+
+
+
+
+
+
+
+
+
 #0 #A #K #U #e #o #y
 #1 #B #L #V #f #p #z
 #2 #C #M #W #g #q
