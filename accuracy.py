@@ -1,5 +1,6 @@
 from keras.callbacks import Callback
 
+
 class AccuracyHistory(Callback):
     def on_train_begin(self, logs={}):
         self.acc = []

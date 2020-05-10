@@ -13,4 +13,5 @@ from accuracy import AccuracyHistory
 
 history = AccuracyHistory()
 
-model.fit(dl.train_image_data, dl.train_label_data, batch_size=const.BATCH_SIZE, epochs=const.EPOCHS, verbose=1, validation_data=(dl.test_image_data, dl.test_label_data), callbacks=[history])
+model.fit(dl.train_image_data, dl.train_label_data, batch_size=const.BATCH_SIZE, epochs=const.EPOCHS,
+          verbose=1, validation_data=(dl.test_image_data, dl.test_label_data), callbacks=[history])
